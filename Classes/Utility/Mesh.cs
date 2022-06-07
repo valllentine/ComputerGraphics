@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Classes.Interfaces
+namespace Classes.Utility
 {
-    class ILoc
+    class Mesh
     {
 
     }
