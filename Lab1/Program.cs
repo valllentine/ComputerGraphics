@@ -1,5 +1,4 @@
-﻿using System;
-using Classes.Utility;
+﻿using Classes.Utility;
 using Classes.Scene;
 using Classes.Objects;
 
@@ -18,19 +17,17 @@ namespace Lab1
             scene.AddObject(s1);
             Sphere s2 = new Sphere(new Point(0, 2, 10), 1);
             scene.AddObject(s2);
-            Sphere s3 = new Sphere(new Point(0, -1.5, 7), 1);
-            scene.AddObject(s3);
+            //Sphere s3 = new Sphere(new Point(0, -1.5, 10), 1);
+            //scene.AddObject(s3);
             Plane plane = new Plane(new Point(-6, 1, 1), new Vector(-1, 0, 0));
             scene.AddObject(plane);
 
             //Creating Light
-            //Light light = new Light(new Vector(-1, 1, 2));
-            //scene.AddLight(light);
-            Light light = new Light(new Vector(-1, -1, 3));
+            Light light = new Light(new Vector(-1, 1, 1));
             scene.AddLight(light);
 
             //Tracing
-            double[,] screen = scene.getScreenArray();
+            double[,] screen = scene.GetScreenArray();
 
             for (int i = 0; i < 40; i++)
             {
@@ -55,7 +52,8 @@ namespace Lab1
                     else
                     {
                         Console.Write('#');
-                    }   
+                    }
+
                 }
                 Console.WriteLine();
             }

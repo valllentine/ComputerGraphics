@@ -12,7 +12,7 @@ namespace Classes.Scene
         private Vector direction;
         private double[,] screen;
 
-        public Camera(Point position, Vector direction, int high, int width)
+        public Camera(Point position,Vector direction, int high, int width)
         {
             this.position = position;
             this.direction = direction.Normalize();

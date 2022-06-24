@@ -51,5 +51,40 @@ namespace Classes.Objects
         {
             return Normal;
         }
+        public object RotateX(double degree)
+        {
+            degree = (float)(degree * Math.PI / 180.0);
+            Center.RotateX(degree);
+            Normal.RotateX(degree);
+            return this;
+        }
+
+        public object RotateY(double degree)
+        {
+            degree = (float)(degree * Math.PI / 180.0);
+            Center.RotateY(degree);
+            Normal.RotateY(degree);
+            return this;
+        }
+
+        public object RotateZ(double degree)
+        {
+            degree = (float)(degree * Math.PI / 180.0);
+            Center.RotateZ(degree);
+            Normal.RotateZ(degree);
+            return this;
+        }
+
+        public object Scale(double kx, double ky, double kz)
+        {
+            return this;
+        }
+
+        public object Translate(Vector direction)
+        {
+            Center.Translate(direction);
+            Normal.Translate(direction);
+            return this;
+        }
     }
 }

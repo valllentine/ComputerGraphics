@@ -58,5 +58,32 @@ namespace Classes.Objects
             Vector v = Center - point;
             return v;
         }
+
+        public object Translate(Vector direction)
+        {
+            Center = (Point)Center.Translate(direction);
+            return this;
+        }
+
+        public object RotateX(double deg)
+        {
+            throw new NotImplementedException();
+        }
+
+        public object RotateY(double deg)
+        {
+            throw new NotImplementedException();
+        }
+
+        public object RotateZ(double deg)
+        {
+            throw new NotImplementedException();
+        }
+
+        public object Scale(double kx, double ky, double kz)
+        {
+            Radius = kx;
+            return this;
+        }
     }
 }

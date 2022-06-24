@@ -7,7 +7,7 @@ using Classes.Utility;
 
 namespace Classes.Interfaces
 {
-    public interface IObject
+    public interface IObject : ITransformable
     {
         bool IsIntersection(Point start, Vector direction);
         Point PointOfIntercept(Point start, Vector direction);

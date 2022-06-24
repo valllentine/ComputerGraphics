@@ -1,21 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using Classes.Utility;
+﻿using Classes.Utility;
 
 namespace Classes.Interfaces
 {
-    public interface ITransformable<T>
+    public interface ITransformable
     {
-        T Rotate(Vector eulers);
+        public object RotateX(double deg);
 
-        T RotateX(double deg);
-        T RotateY(double deg);
-        T RotateZ(double deg);
+        public object RotateY(double deg);
 
-        T Scale(Vector scale);
+        public object RotateZ(double deg);
 
-        T Move(Vector dir);
+        public object Scale(double kx, double ky, double kz);
+
+        public object Translate(Vector dir);
     }
 }
