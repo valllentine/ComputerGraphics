@@ -42,14 +42,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Interfaces\IInteresectable.cs" />
+    <Compile Include="Interfaces\IObject.cs" />
     <Compile Include="Interfaces\ITransformable.cs" />
-    <Compile Include="Parametric\Plane.cs" />
-    <Compile Include="Parametric\Sphere.cs" />
-    <Compile Include="SceneObjects\Camera.cs" />
-    <Compile Include="SceneObjects\Light.cs" />
-    <Compile Include="SceneObjects\Object.cs" />
-    <Compile Include="Utility\Mesh.cs" />
+    <Compile Include="Objects\Plane.cs" />
+    <Compile Include="Objects\Sphere.cs" />
+    <Compile Include="Scene\Camera.cs" />
+    <Compile Include="Scene\Light.cs" />
+    <Compile Include="Scene\Scene.cs" />
     <Compile Include="Utility\Point.cs" />
     <Compile Include="Utility\Ray.cs" />
     <Compile Include="Utility\Triangle.cs" />

@@ -5,9 +5,9 @@ using System.Text;
 
 namespace Classes.Utility
 {
-    //Ignore
     public class Point : Vector
     {
-        public Point(float x, float y, float z) : base(x, y, z) { }
+        public Point(double x, double y, double z) : base(x, y, z) { }
+
     }
 }

@@ -6,13 +6,13 @@ using Classes.Utility;
 
 namespace Classes.Interfaces
 {
-    interface ITransformable<T>
+    public interface ITransformable<T>
     {
         T Rotate(Vector eulers);
 
-        T RotateX(float deg);
-        T RotateY(float deg);
-        T RotateZ(float deg);
+        T RotateX(double deg);
+        T RotateY(double deg);
+        T RotateZ(double deg);
 
         T Scale(Vector scale);
 
