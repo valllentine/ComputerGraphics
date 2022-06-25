@@ -1,11 +1,12 @@
 ﻿using Classes.Utility;
 using Classes.Interfaces;
+using Classes.Objects;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
 
-namespace Classes.Objects
+namespace Lab2.Files
 {
     public class ObjFile
     {

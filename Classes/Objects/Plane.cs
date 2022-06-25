@@ -51,27 +51,27 @@ namespace Classes.Objects
         {
             return Normal;
         }
-        public object RotateX(double degree)
+        public object RotateX(double deg)
         {
-            degree = (float)(degree * Math.PI / 180.0);
-            Center.RotateX(degree);
-            Normal.RotateX(degree);
+            deg = (float)(deg * Math.PI / 180.0);
+            Center.RotateX(deg);
+            Normal.RotateX(deg);
             return this;
         }
 
-        public object RotateY(double degree)
+        public object RotateY(double deg)
         {
-            degree = (float)(degree * Math.PI / 180.0);
-            Center.RotateY(degree);
-            Normal.RotateY(degree);
+            deg = (float)(deg * Math.PI / 180.0);
+            Center.RotateY(deg);
+            Normal.RotateY(deg);
             return this;
         }
 
-        public object RotateZ(double degree)
+        public object RotateZ(double deg)
         {
-            degree = (float)(degree * Math.PI / 180.0);
-            Center.RotateZ(degree);
-            Normal.RotateZ(degree);
+            deg = (float)(deg * Math.PI / 180.0);
+            Center.RotateZ(deg);
+            Normal.RotateZ(deg);
             return this;
         }
 

@@ -116,7 +116,7 @@ namespace Tests
         #endregion
     }
 
-    #region DataForTests
+#region DataForTests
 
     public class PointsTestData : IEnumerable<object[]>
     {

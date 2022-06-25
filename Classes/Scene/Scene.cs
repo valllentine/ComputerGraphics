@@ -1,6 +1,4 @@
 ﻿using Classes.Interfaces;
-using System;
-using System.Collections.Generic;
 using Classes.Utility;
 
 namespace Classes.Scene
@@ -204,7 +202,6 @@ namespace Classes.Scene
                 yIterator = 0;
                 var pixelCenter = new Point(scanlineStartPoint.X, scanlineStartPoint.Y, scanlineStartPoint.Z);
 
-                //var pixelCenter = planePoz;
                 for (int y = startWidth; y < endWidth; y++)
                 {
 
@@ -213,26 +210,26 @@ namespace Classes.Scene
                     double minDistance = TheNearest(ray, Objects, camera.Position, out IObject nearestObj, out Point nearestIntercept);
                     if (nearestIntercept != null)
                     {
-                        double minNumber = 0;
+                        double shadowpixel = 0;
                         if (light != null)
                         {
                             Vector shadowVector = Vector.Neg(light.LightDir);
                             bool isShadow = false;
 
-                            //foreach (var obj in Objects)
-                            //{
-                            //    if (obj.IsIntersection(nearestIntercept, shadowVector))
-                            //        isShadow = true;
-                            //}
+                            foreach (var obj in Objects)
+                            {
+                                if (obj.IsIntersection(nearestIntercept, shadowVector))
+                                    isShadow = true;
+                            }
 
-                            minNumber = -(light.LightDir * nearestObj.GetNormal(nearestIntercept).Normalize());
+                            shadowpixel = (light.LightDir * nearestObj.GetNormal(nearestIntercept).Normalize());
                             if (isShadow)
-                                minNumber /= 2;
+                                shadowpixel /= 2;
                         }
                         else
-                            minNumber = 0;
+                            shadowpixel = 0;
 
-                        partScreen[x, yIterator] = minNumber;
+                        partScreen[x, yIterator] = shadowpixel;
                     }
 
                     yIterator++;
